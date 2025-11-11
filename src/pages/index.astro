@@ -10,6 +10,7 @@ import Icon from '../components/Icon.astro';
 import Pill from '../components/Pill.astro';
 import PortfolioPreview from '../components/PortfolioPreview.astro';
 import Skills from '../components/Skills.astro';
+import TechStack from '../components/TechStack.astro';
 // Layout import — provides basic page elements: <head>, <nav>, <footer> etc.
 import BaseLayout from '../layouts/BaseLayout.astro';
 
@@ -52,8 +53,8 @@ const projects = (await getCollection('work'))
 		<main class="wrapper stack gap-20 lg:gap-48">
 			<section class="section with-background with-cta">
 				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Professional Experience</h3>
-					<p>Explore my professional journey working with various companies and technologies.</p>
+					<h3>Featured Projects</h3>
+					<p>Check out some of my recent projects showcasing my technical skills and problem-solving abilities.</p>
 				</header>
 
 				<div class="gallery">
@@ -69,8 +70,8 @@ const projects = (await getCollection('work'))
 				</div>
 
 				<div class="cta">
-					<CallToAction href="/work/">
-						View All
+					<CallToAction href={import.meta.env.BASE_URL + "work/"}>
+						View All Projects
 						<Icon icon="arrow-right" size="1.2em" />
 					</CallToAction>
 				</div>
@@ -78,22 +79,14 @@ const projects = (await getCollection('work'))
 
 			<section class="section with-background bg-variant">
 				<header class="section-header stack gap-2 lg:gap-4">
-					<h3>Technologies</h3>
+					<h3>Technical Stack</h3>
 					<p>
-						Core technologies and tools I work with to build modern, scalable applications.
+						Comprehensive overview of technologies and tools I use to build modern, scalable applications.
 					</p>
 				</header>
 
-				<div class="gallery">
-					<Grid variant="small">
-						{
-							['React', 'Next.js', 'Node.js', 'TypeScript', 'Vue.js'].map((brand) => (
-								<li class="mention-card">
-									<p>{brand}</p>
-								</li>
-							))
-						}
-					</Grid>
+				<div class="tech-wrapper">
+					<TechStack />
 				</div>
 			</section>
 		</main>
@@ -226,23 +219,14 @@ const projects = (await getCollection('work'))
 
 	/* ====================================================== */
 
-	.mention-card {
-		display: flex;
-		height: 7rem;
-		justify-content: center;
-		align-items: center;
-		text-align: center;
-		border: 1px solid var(--gray-800);
-		border-radius: 1.5rem;
-		color: var(--gray-300);
-		background: var(--gradient-subtle);
-		box-shadow: var(--shadow-sm);
+	.tech-wrapper {
+		grid-column: 1 / -1;
+		width: 100%;
 	}
 
 	@media (min-width: 50em) {
-		.mention-card {
-			border-radius: 1.5rem;
-			height: 9.5rem;
+		.tech-wrapper {
+			padding: 0 2rem;
 		}
 	}
 </style>

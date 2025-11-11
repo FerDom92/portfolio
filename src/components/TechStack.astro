@@ -1,0 +1,178 @@
+---
+import Icon from './Icon.astro';
+
+interface TechItem {
+	name: string;
+	icon: string;
+}
+
+interface TechCategory {
+	title: string;
+	icon: string;
+	items: TechItem[];
+}
+
+const techCategories: TechCategory[] = [
+	{
+		title: 'Frontend',
+		icon: 'code',
+		items: [
+			{ name: 'JavaScript', icon: 'terminal-window' },
+			{ name: 'TypeScript', icon: 'terminal-window' },
+			{ name: 'React', icon: 'code' },
+			{ name: 'Next.js', icon: 'rocket-launch' },
+			{ name: 'Vue.js', icon: 'code' },
+			{ name: 'HTML5', icon: 'code' },
+			{ name: 'CSS3', icon: 'pencil-line' },
+			{ name: 'Tailwind CSS', icon: 'pencil-line' },
+		],
+	},
+	{
+		title: 'Backend',
+		icon: 'terminal-window',
+		items: [
+			{ name: 'Node.js', icon: 'terminal-window' },
+			{ name: 'Express.js', icon: 'terminal-window' },
+			{ name: 'Nest.js', icon: 'rocket-launch' },
+			{ name: 'Sails.js', icon: 'terminal-window' },
+			{ name: 'GraphQL', icon: 'strategy' },
+			{ name: 'REST APIs', icon: 'strategy' },
+		],
+	},
+	{
+		title: 'Databases',
+		icon: 'strategy',
+		items: [
+			{ name: 'MongoDB', icon: 'strategy' },
+			{ name: 'MySQL', icon: 'strategy' },
+			{ name: 'PostgreSQL', icon: 'strategy' },
+		],
+	},
+	{
+		title: 'Testing & Quality',
+		icon: 'trophy',
+		items: [
+			{ name: 'Jest', icon: 'trophy' },
+			{ name: 'Vitest', icon: 'trophy' },
+			{ name: 'Postman', icon: 'paper-plane-tilt' },
+			{ name: 'SonarQube', icon: 'trophy' },
+		],
+	},
+	{
+		title: 'DevOps & Tools',
+		icon: 'rocket-launch',
+		items: [
+			{ name: 'Git', icon: 'github-logo' },
+			{ name: 'GitHub', icon: 'github-logo' },
+			{ name: 'GitLab', icon: 'github-logo' },
+			{ name: 'Docker', icon: 'rocket-launch' },
+			{ name: 'CI/CD', icon: 'rocket-launch' },
+			{ name: 'Vercel', icon: 'rocket-launch' },
+		],
+	},
+	{
+		title: 'Additional Tools',
+		icon: 'pencil-line',
+		items: [
+			{ name: 'Storybook', icon: 'pencil-line' },
+			{ name: 'Figma', icon: 'pencil-line' },
+			{ name: 'Jira', icon: 'list' },
+			{ name: 'Swagger', icon: 'paper-plane-tilt' },
+			{ name: 'Contentful', icon: 'pencil-line' },
+			{ name: 'WebSockets', icon: 'strategy' },
+		],
+	},
+];
+---
+
+<section class="tech-stack">
+	{
+		techCategories.map((category) => (
+			<div class="tech-category">
+				<div class="category-header">
+					<Icon icon={category.icon} color="var(--accent-regular)" size="1.5rem" gradient />
+					<h3>{category.title}</h3>
+				</div>
+				<div class="tech-items">
+					{category.items.map((item) => (
+						<div class="tech-item">
+							<Icon icon={item.icon} size="1.2rem" />
+							<span>{item.name}</span>
+						</div>
+					))}
+				</div>
+			</div>
+		))
+	}
+</section>
+
+<style>
+	.tech-stack {
+		display: grid;
+		gap: 2rem;
+		padding: 2rem 0;
+	}
+
+	.tech-category {
+		border: 1px solid var(--gray-800);
+		border-radius: 1rem;
+		padding: 1.5rem;
+		background: var(--gradient-subtle);
+		box-shadow: var(--shadow-sm);
+	}
+
+	.category-header {
+		display: flex;
+		align-items: center;
+		gap: 0.75rem;
+		margin-bottom: 1rem;
+		padding-bottom: 0.75rem;
+		border-bottom: 1px solid var(--gray-800);
+	}
+
+	.category-header h3 {
+		font-size: var(--text-lg);
+		color: var(--gray-0);
+		margin: 0;
+	}
+
+	.tech-items {
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+		gap: 0.75rem;
+	}
+
+	.tech-item {
+		display: flex;
+		align-items: center;
+		gap: 0.5rem;
+		padding: 0.5rem 0.75rem;
+		border-radius: 0.5rem;
+		background: var(--gray-999_40);
+		color: var(--gray-200);
+		font-size: var(--text-sm);
+		transition: all var(--theme-transition);
+	}
+
+	.tech-item:hover {
+		background: var(--accent-subtle-overlay);
+		color: var(--gray-0);
+		transform: translateY(-2px);
+	}
+
+	@media (min-width: 50em) {
+		.tech-stack {
+			grid-template-columns: repeat(2, 1fr);
+		}
+
+		.tech-items {
+			grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+		}
+	}
+
+	@media (min-width: 70em) {
+		.tech-stack {
+			grid-template-columns: repeat(3, 1fr);
+		}
+	}
+</style>

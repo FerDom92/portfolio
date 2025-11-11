@@ -1,60 +1,62 @@
-# Fernando Dominguez - Portfolio
+# Fernando Dominguez - Fullstack Developer
 
-My personal portfolio website built with Astro, showcasing my experience as a Fullstack Developer with 5+ years of experience.
+## Why Hire Me?
 
-## Live Site
+I am a results-driven **Fullstack Developer** with over **5 years of professional experience** building scalable web applications and leading technical initiatives. I bring a proven track record of delivering high-quality solutions while maintaining exceptional code standards and collaborating effectively with cross-functional teams.
 
-The portfolio is deployed at: https://fernando-dom1992.github.io/portfolio/
+### 🎯 Key Strengths
 
-## 🧞 Commands
+**Technical Excellence**
+- Deep expertise in modern JavaScript/TypeScript ecosystems (React, Next.js, Node.js, Vue.js)
+- Strong full-stack capabilities spanning frontend, backend, and database design
+- Proven experience with cloud deployments (Google Cloud Platform) and CI/CD pipelines
+- Comprehensive testing mindset with Jest, Vitest, and end-to-end testing frameworks
 
-All commands are run from the root of the project, from a terminal:
+**Leadership & Collaboration**
+- Experienced in mentoring junior developers and conducting thorough code reviews
+- Skilled at breaking down complex requirements into manageable, actionable tasks
+- Strong communicator who works effectively with QA, design, and product teams
+- Agile/Scrum methodology practitioner with experience using Jira for project management
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+**Quality & Innovation**
+- Committed to writing clean, maintainable code that exceeds quality gate standards
+- Track record of modernizing legacy systems and implementing best practices
+- Passionate about continuous learning and staying current with emerging technologies
+- Focus on creating efficient, scalable solutions that solve real business problems
 
-## Deployment to GitHub Pages
+### 💼 Professional Experience Highlights
 
-This portfolio is automatically deployed to GitHub Pages using GitHub Actions.
+**5+ years** of professional development experience across diverse industries:
+- **E-commerce**: Built and maintained large-scale retail platforms
+- **HR & Recruitment**: Developed comprehensive payroll and recruitment management systems
+- **Healthcare**: Created critical hospital management and patient tracking systems
+- **Enterprise Solutions**: Delivered institutional websites and CMS platforms
 
-### Setup Instructions
+### 🛠️ Technical Stack
 
-1. Create a new repository on GitHub named `portfolio`
-2. Push this code to GitHub:
-   ```sh
-   git remote add origin https://github.com/fernando-dom1992/portfolio.git
-   git push -u origin main
-   ```
-3. Go to your GitHub repository settings
-4. Navigate to Pages (under Code and automation)
-5. Under "Build and deployment":
-   - Source: Select "GitHub Actions"
-6. The site will automatically build and deploy on every push to main
+**Frontend**: React, Next.js, Vue.js, TypeScript, JavaScript, CSS, Tailwind
+**Backend**: Node.js, Express.js, Nest.js, GraphQL, RESTful APIs
+**Databases**: MongoDB, MySQL, PostgreSQL
+**Testing**: Jest, Vitest, Postman
+**DevOps**: Docker, GitLab CI, GitHub Actions, Vercel
+**Tools**: Git, Figma, Jira, SonarQube, Storybook
 
-The portfolio will be available at: https://fernando-dom1992.github.io/portfolio/
+### 🎓 Education
 
-## Technologies Used
+**System Analyst** - Universidad Siglo XXI (2017-2020)
+**Chemical Technician** - E.P.E.T N 5 (2007-2012)
 
-- Astro
-- TypeScript
-- CSS
+### 📍 Location
 
-## About
+Based in **Neuquén, Argentina** - Open to remote opportunities
 
-This portfolio showcases my professional experience including roles at:
-- Frávega Tech (Frontend Developer)
-- WeDevelop (Fullstack Developer)
-- Natural Tech House (Fullstack Developer)
-- Grupo CMIC (Fullstack Developer)
+### 🔗 Connect With Me
 
-## Contact
+- **LinkedIn**: [fernando-dominguez1992](https://www.linkedin.com/in/fernando-dominguez1992/)
+- **GitHub**: [FerDom92](https://github.com/FerDom92)
+- **Email**: fernando.dom1992@gmail.com
+- **Portfolio**: https://FerDom92.io/portfolio/
 
-- Email: fernando.dom1992@gmail.com
-- LinkedIn: https://www.linkedin.com/in/fernando-dominguez1992/
-- GitHub: https://github.com/fernando-dom1992
+---
+
+*Looking for a dedicated fullstack developer who delivers quality code, mentors teams, and drives technical excellence? Let's connect!*
