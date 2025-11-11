@@ -1,7 +1,7 @@
 ---
 title: Project Coming Soon
 publishDate: 2024-12-01 00:00:00
-img: /assets/stock-2.jpg
+img: /portfolio/assets/stock-2.jpg
 img_alt: Placeholder for upcoming project
 description: |
   Exciting new project in development. Check back soon for updates!
