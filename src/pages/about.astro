@@ -1,0 +1,122 @@
+---
+import ContactCTA from '../components/ContactCTA.astro';
+import Hero from '../components/Hero.astro';
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="About | Fernando Dominguez" description="About Fernando Dominguez - Fullstack Developer">
+	<div class="stack gap-20">
+		<main class="wrapper about">
+			<Hero
+				title="About"
+				tagline="Thanks for stopping by. Read below to learn more about myself and my background."
+			>
+				<img
+					width="1553"
+					height="873"
+					src="/assets/at-work.jpg"
+					alt="Fernando Dominguez - Fullstack Developer"
+				/>
+			</Hero>
+
+			<section>
+				<h2 class="section-title">Background</h2>
+				<div class="content">
+					<p>
+						I am a Fullstack developer with over 5 years of experience, passionate about technological innovation and
+						code quality. Throughout my career, I've worked with leading companies like Frávega Tech, WeDevelop,
+						Natural Tech House, and Grupo CMIC, building diverse applications from e-commerce platforms to healthcare systems.
+					</p>
+					<p>
+						My expertise spans the entire development stack, with deep knowledge in React, Next.js, Node.js, TypeScript,
+						Vue.js, and various databases including MongoDB, MySQL, and PostgreSQL. I'm committed to continuous learning
+						and constantly seek new challenges that allow me to grow professionally.
+					</p>
+					<p>
+						I focus on creating efficient and scalable solutions, working closely with cross-functional teams,
+						performing code reviews, and mentoring junior developers. My goal is to contribute to the success
+						of every project I participate in through quality code and innovative approaches.
+					</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Education</h2>
+				<div class="content">
+					<p><strong>Universidad Siglo XXI</strong> (2017 – 2020)<br/>System Analyst</p>
+					<p><strong>E.P.E.T N 5</strong> (2007 - 2012)<br/>Chemical Technician</p>
+				</div>
+			</section>
+			<section>
+				<h2 class="section-title">Skills</h2>
+				<div class="content">
+					<p><strong>Frontend:</strong> JavaScript, TypeScript, React, Next.js, Vue.js, CSS, Tailwind<br/>
+					<strong>Backend:</strong> Node.js, Express.js, Nest.js, GraphQL<br/>
+					<strong>Databases:</strong> MongoDB, MySQL, PostgreSQL<br/>
+					<strong>Testing:</strong> Jest, Vitest<br/>
+					<strong>Tools:</strong> Git, GitHub, GitLab, Docker, CI/CD, StoryBook, Figma, Jira, SonarQube<br/>
+					<strong>Methodologies:</strong> Scrum, Agile</p>
+				</div>
+			</section>
+		</main>
+
+		<ContactCTA />
+	</div>
+</BaseLayout>
+
+<style>
+	.about {
+		display: flex;
+		flex-direction: column;
+		gap: 3.5rem;
+	}
+
+	img {
+		margin-top: 1.5rem;
+		border-radius: 1.5rem;
+		box-shadow: var(--shadow-md);
+	}
+
+	section {
+		display: flex;
+		flex-direction: column;
+		gap: 0.5rem;
+		color: var(--gray-200);
+	}
+
+	.section-title {
+		grid-column-start: 1;
+		font-size: var(--text-xl);
+		color: var(--gray-0);
+	}
+
+	.content {
+		grid-column: 2 / 4;
+	}
+
+	.content :global(a) {
+		text-decoration: 1px solid underline transparent;
+		text-underline-offset: 0.25em;
+		transition: text-decoration-color var(--theme-transition);
+	}
+
+	.content :global(a:hover),
+	.content :global(a:focus) {
+		text-decoration-color: currentColor;
+	}
+
+	@media (min-width: 50em) {
+		.about {
+			display: grid;
+			grid-template-columns: 1fr 60% 1fr;
+		}
+
+		.about > :global(:first-child) {
+			grid-column-start: 2;
+		}
+
+		section {
+			display: contents;
+			font-size: var(--text-lg);
+		}
+	}
+</style>
