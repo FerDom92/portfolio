@@ -43,7 +43,7 @@ const projects = (await getCollection('work'))
 					alt="Fernando Dominguez - Fullstack Developer"
 					width="480"
 					height="620"
-					src={import.meta.env.BASE_URL + "assets/portrait.jpg"}
+					src={(import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : import.meta.env.BASE_URL + '/') + "assets/portrait.jpg"}
 				/>
 			</header>
 
@@ -70,7 +70,7 @@ const projects = (await getCollection('work'))
 				</div>
 
 				<div class="cta">
-					<CallToAction href={import.meta.env.BASE_URL + "work/"}>
+					<CallToAction href={(import.meta.env.BASE_URL.endsWith('/') ? import.meta.env.BASE_URL : import.meta.env.BASE_URL + '/') + "work/"}>
 						View All Projects
 						<Icon icon="arrow-right" size="1.2em" />
 					</CallToAction>
